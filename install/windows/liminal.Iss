@@ -12,8 +12,11 @@
 
    [Icons]
    Name: "{group}\Liminal"; Filename: "{app}\liminal.bat"
-   Name: "{group}\Uninstall Liminal"; Filename: "{uninstallexe}"
    Name: "{userdesktop}\Liminal"; Filename: "{app}\liminal.bat"; Tasks: desktopicon
+   Name: "{group}\Uninstall Liminal (Delete App Files)"; Filename: "{uninstallexe}"; Parameters: "/DELETE /ALLFILES"
+
+   [Run]
+   Filename: "{app}\custom_uninstaller.bat"; Parameters: "{app}"
 
    [Tasks]
    Name: "desktopicon"; Description: "Create a Luminal &desktop icon"; GroupDescription: "Luminal icons:"
